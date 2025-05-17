@@ -21,48 +21,40 @@
         header {
             text-align: center;
             padding: 20px;
-            justify-content: space-between;
-            display:flex;
-            cursor:pointer;
-            align-items: center;
         }
 
         .menu-name {
-            font-size: 22px;
+            font-size: 28px;
             color: #BEBEBE;
-            margin: 25px;
+            margin-bottom: 30px;
             text-align: center;
-            font-weight: bold;
-            margin-top:60px;
         }
 
         .item-name {
             cursor: pointer;
-            font-weight: regular;
-            font-size: 20px;
-            padding: 30px;
-            margin: 3px 0;
-            background-color: rgba(0,0,0, 0.8);
-            border-radius: 15px;
+            font-size: 22px;
+            padding: 25px;
+            margin: 0px 0;
+            background-color: #1b1a1a;
+            border-radius: 8px;
             text-align: center;
             transition: background-color 0.3s ease, color 0.3s ease;
-            box-shadow: 0 2px 10px rgba(156, 156, 156, 0.4);
+            box-shadow: 0 2px 10px rgba(156, 152, 152, 0.1);
         }
 
         .item-name:hover {
             color: #EDB418;
-            
+            background-color: #2b2a2a;
         }
 
         .itemss {
-            max-height: 0;
+            max-height:0 ;
             overflow: hidden;
             transition: max-height 0.4s ease;
-            background-color: rgba(0,0,0, 0.5);
+            background-color: #1b1a1a;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(156, 156, 156, 0.4);
-            margin-bottom: 27px;
-            
+            box-shadow: 0 2px 10px rgba(156, 152, 152, 0.1);
+            margin-bottom: 15px;
         }
 
         .itemss.open {
@@ -70,20 +62,19 @@
         }
 
         .items {
-            padding: 10px 15px;
+            padding: 12px 15px;
             margin: 10px;
-            background-color: rgb(20,20,20);
+            background-color: #2f2f2f;
             border-radius: 10px;
             transition: background-color 0.3s ease;
         }
 
         .item {
-            padding:0;
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
         }
 
         .item:hover .name {
@@ -101,12 +92,6 @@
             padding: 0;
             transition: max-height 0.4s ease, padding 0.4s ease;
             color: #aaa;
-            display:flex;
-            justify-content: flex-start;
-            gap:10px;
-            margin-top:10px;
-            
-            
         }
 
         .op.show {
@@ -115,24 +100,21 @@
         }
         .op-content {
             display: flex;
-            /*align-items: flex-start;*/
-            gap: 2px;
+            align-items: flex-start;
+            gap: 10px;
         }
 
         .op-content img {
             width: 60px;
             height: 60px;
             object-fit: cover;
-            border-radius: 30px;
+            border-radius: 6px;
         }
-       .op img {
-           border-radius: 10px;
-       }
+
         button {
             background-color: #000;
             color: #BEBEBE;
             border-width: 0;
-            
         }
         button:hover {
             color:#EDB418;
@@ -141,173 +123,23 @@
         .gold {
             color:#EDB418;
         }
-        img {
-           
-            top:50px;
-        }
-        .logo-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            top:25px;
-            
-        }
-        
-        .logo {
-            width: 210px;
-            height: 120px;
-            
-      
-        }
-        
-        .circle-wrapper {
-            position: relative;
-            width: 100px;
-            height: 100px;
-        }
-        
-        .round-img {
-            position: absolute;
-            top: -20px;
-            right: -60px;
-            width: 135px;
-            height: 135px;
-            border-radius: 50%;
-            object-fit: cover;
-            z-index:1;
-        }
-        
-        .small-img {
-            position: absolute;
-            bottom: 0;
-            right: -4px;
-            top:36px;
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            z-index: 3;
-        }
-        
-        .black-circle {
-            position: absolute;
-            bottom: 0;
-            top:29px;
-            right: -9px;
-            width: 100px;
-            height: 100px;
-            background-color: black;
-            border-radius: 50%;
-            z-index: 2;
-        }
-        .tri{
-            position: absolute; 
-            bottom: 0;
-            left: 0;
-            top:270px;
-            width: 280px; 
-            height: auto;
-            overflow: hidden;
-            z-index: -3; 
-        }
-        
-        .tri img {
-            width: 100%;
-            display: block;
-            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-            transform: rotate(90deg);
-            box-shadow:  rgba(156, 156, 156, 0.7);
-        }
-        .one{
-            position: absolute; 
-            bottom: 0;
-            left: 0;
-            top:670px;
-            width: 280px; 
-            height: 300px;
-            overflow: hidden;
-            z-index: -2; 
-        }
-        
-        .one img {
-            width: 100%;
-            display: block;
-            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-            transform: rotate(90deg);
-            box-shadow:  rgba(156, 156, 156, 0.7);
-        }
-        .sec{
-            position: absolute; 
-            bottom: 0;
-            left: 150px;
-            top:460px;
-            width: 300px; 
-            height: 300px;
-            overflow: hidden;
-            z-index: -2; 
-        }
-        
-        .sec img {
-            width: 100%;
-            display: block;
-            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-            transform: rotate(270deg);
-            box-shadow:  rgba(156, 156, 156, 0.7);
-        }
-        .three{
-            position: absolute; 
-            bottom: 0;
-            left: 150px;
-            top:880px;
-            width: 280px; 
-            height: 200px;
-            overflow: hidden;
-            z-index: -2;
-        }
-        
-        .three img {
-            width: 100%;
-            display: block;
-            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-            transform: rotate(270deg);
-            box-shadow:  rgba(156, 156, 156, 0.7);
-        }
-    
-        
-    
-
-
     </style>
 </head>
 <body>
     <div class="header">
-        
-        <div class="logo-container">
-            <img src="logo.jpg" class="logo">
-            <div class="circle-wrapper">
-                <img src="head.png" class="small-img">
-                <div class="black-circle"></div>
-                <img src="heade.jpg" class="round-img">
-            </div>
-        </div>
+        <nav>
+            <button class="gold">Головна</button>
+            <button>Меню</button>
+            <button>Адмін</button>
+        </nav>
+        <img src="logo.png" >
+        <img src="h1.jpg">
+        <img src="h2.png">
         <div class="menu-name">
             НАШЕ МЕНЮ
         </div>
     </div>
     <div class="menu">
-        <div class='tri'>
-            <img src='trioo.jpg' class='triangle'>
-        </div>
-        <div class='one'>
-            <img src='one.jpg' class='onek'> 
-        </div>
-        <div class='sec'>
-            <img src='second.jpg'>
-        </div>
-        <div class='three'>
-            <img src='three.jpg'>
-        </div>
         <div class="category">
             <div class="item-name toggle-button">
                 Салати
@@ -323,11 +155,10 @@
                         </div>
                     </div>
                     <div class="op">
-                        <img src='ceza.webp'>
+                        <img src="cez.jpg" alt="">
                         Лист салата, яйця перепелині, помідор чері, 
                         куряче філе су-від, сухарики, сир пармезан,
                         кунжут, бальзамічний соус, заправка.
-                        
                     </div>
                 </div>
                 <div class="items">
@@ -340,8 +171,7 @@
                         </div>
                     </div>
                     <div class="op">
-                        <img src='v.jpg'>
-                        Капуста, огірок, заправка.
+                        капуста, огірок, зелень, заправка.
                     </div>
                 </div>
                 <div class="items">
@@ -354,8 +184,7 @@
                         </div>
                     </div>
                     <div class="op">
-                        <img src='do.jpg'>
-                        Огірок, помідор, цибуля, перець болгарський.
+                        огірок, помідор, цибуля, перець болгарський.
                     </div>
                 </div>
                 <div class="items">
@@ -368,8 +197,7 @@
                         </div>
                     </div>
                     <div class="op">
-                        <img src='ba.jpg'>
-                        Лист салата, помідор чері, смажений баклажан, фєта,
+                        лист салата, помідор чері, смажений баклажан, фєта,
                         бальзамічний соус, кунжут, заправка. 
                     </div>
                 </div>
@@ -389,8 +217,7 @@
                         <div class="price">130 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='bor.jpg'>                        
-                        Зі сметаною.
+                        свинина, сметана, зелень
                     </div>
                 </div>
                 <div class="items">
@@ -403,8 +230,7 @@
                         </div>
                     </div>
                     <div class="op">
-                        <img src='bul.jpg'>
-                        Яйце, філе куряче.
+                        локшина, яйце, філе куряче, зелень
                     </div>
                 </div>
                 <div class="items">
@@ -415,9 +241,8 @@
                         <div class="price">150 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='sol.jpg'>
-                        копченості, огірок маринований,
-                        сметана.
+                        копченості: ковбаски, куряче стегно, огірок маринований,
+                        лимон, оливка, зелень, сметана.
                     </div>
                 </div>
             </div>
@@ -435,8 +260,7 @@
                             <div class="price">100 ₴</div>
                         </div>
                         <div class="op">
-                            <img src='a.jpg'>
-                            
+                            без родзинок, сметана, пудра
                         </div>
                     </div>
                     <div class="items">
@@ -447,8 +271,7 @@
                             <div class="price">120 ₴</div>
                         </div>
                         <div class="op">
-                            <img src='b.jpg'>
-                            
+                            свинина, сметана
                         </div>
                     </div>
                     <div class="items">
@@ -459,8 +282,7 @@
                             <div class="price">180 ₴</div>
                         </div>
                         <div class="op">
-                            <img src='c.jpg'>
-                            Мелене сало, мариновані огірки, грінки, маринована цибуля,
+                            мелене сало, мариновані огірки, грінки, маринована цибуля,
                             часниковий соус.
                         </div>
                     </div>
@@ -470,10 +292,6 @@
                                 Оселедець з цибулею
                             </div>
                             <div class="price">195 ₴</div>
-                   
-                        </div>
-                        <div class='op'>
-                            <img src='d.jpg'>
                         </div>
                     </div>
                     <div class="items">
@@ -484,8 +302,7 @@
                             <div class="price">90 ₴</div>
                         </div>
                         <div class="op">
-                            <img src='e.jpg'>
-                            
+                            сметана, масло
                         </div>
                     </div>
                     <div class="items">
@@ -496,8 +313,7 @@
                             <div class="price">120 ₴</div>
                         </div>
                         <div class="op">
-                            <img src='f.jpg'>
-                            
+                            сметана, масло
                         </div>
                     </div>
                     <div class="items">
@@ -508,8 +324,7 @@
                             <div class="price">240 ₴</div>
                         </div>
                         <div class="op">
-                            <img src='g.jpg'>
-                            Сало, мариновані огірки, грінки, маринована цибуля,
+                            сало, мариновані огірки, грінки, маринована цибуля,
                             часниковий соус, гірчиця.
                         </div>
                     </div>
@@ -523,8 +338,7 @@
                             </div>
                         </div>
                         <div class="op">
-                            <img src='h.jpg'>
-                            
+                            свинина, помідор, зелень.
                         </div>
                     </div>
             </div>
@@ -542,9 +356,6 @@
                         </div>
                     <div class="price">100 ₴</div>
                 </div>
-                    <div class ='op'>
-                        <img src='i.jpg'>
-                    </div>  
                 </div>
                 <div class="items">
 
@@ -556,8 +367,7 @@
                         <div class="price">100 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='j.jpg'>
-                        
+                        цибуля, часник.
                     </div>
                 </div>
                 <div class="items">
@@ -570,8 +380,7 @@
                         <div class="price">90 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='k.jpg'>
-                       
+                        з молоком, масло.
                     </div>
                 </div>
                 <div class="items">
@@ -582,10 +391,6 @@
                             Яєчня глазун'я
                         </div>
                         <div class="price">90 ₴</div>
-                        
-                    </div>
-                    <div class='op'>
-                        <img src='l.jpg'>
                     </div>
                 </div>
                 <div class="items">
@@ -597,9 +402,6 @@
                         </div>
                         <div class="price">75 ₴</div>
                     </div>
-                    <div class='op'>
-                        <img src='m.jpg'>
-                    </div>
                 </div>
                 <div class="items">
 
@@ -610,8 +412,7 @@
                         <div class="price">100 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='n.jpg'>
-                        
+                        молоко, майонез
                     </div>
                 </div>
             </div>
@@ -627,8 +428,7 @@
                         <div class="price">210 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='o.jpg'>
-                        Пшенична локшина, овочі мікс: квасоля стручкова,
+                        пшенична локшина, овочі мікс: квасоля стручкова,
                         перець солодкий, морква, цибуля, кукурудза, печериці,
                         білий кунжут.
                     </div>
@@ -641,8 +441,7 @@
                         <div class="price">210 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='p.jpg'>
-                        Пшенична локшина, куряче філе, овочі мікс: квасоля стручкова,
+                        пшенична локшина, куряче філе, овочі мікс: квасоля стручкова,
                         перець солодкий, морква, цибуля, кукурудза, печериці, 
                         білий кунжут, 
                     </div>
@@ -655,8 +454,7 @@
                         <div class="price">210 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='q.jpg'>
-                        Гречана локшина, овочі мікс: квасоля стручкова,
+                        гречана локшина, овочі мікс: квасоля стручкова,
                         перець солодкий, морква, цибуля, кукурудза, печериці,
                         білий кунжут.
                     </div>
@@ -669,8 +467,7 @@
                         <div class="price">210 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='r.jpg'>
-                        Гречана локшина, куряче філе, овочі мікс: квасоля стручкова,
+                        гречана локшина, куряче філе, овочі мікс: квасоля стручкова,
                         перець солодкий, морква, цибуля, кукурудза,
                         печериці, білий кунжут.
                     </div>
@@ -682,9 +479,6 @@
                         </div>
                         <div class="price">110 ₴</div>
                     </div>
-                    <div class='op'>
-                        <img src='s.png'>
-                    </div>
                 </div>
                 <div class="items">
                     <div class="item toggle-desc">
@@ -693,10 +487,6 @@
                         </div>
                         <div class="price">95 ₴</div>
                     </div>
-                    <div class='op'>
-                        <img src='t.png'>
-                    </div>
-                    
                 </div>
                 <div class="items">
                     <div class="item toggle-desc">
@@ -704,9 +494,6 @@
                             Нагетси курячі
                         </div>
                         <div class="price">150 ₴</div>
-                    </div>
-                    <div class='op'>
-                        <img src='u.jpg'>
                     </div>
                 </div>
                 <div class="items">
@@ -717,8 +504,7 @@
                         <div class="price">130 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='vv.jpg'>
-                        Котлета куряча, помідор, маринований огірок, сир,
+                        котлета куряча, помідор, маринований огірок, сир,
                         лист салата, кетчуп, майонез.
                     </div>
                 </div>
@@ -730,8 +516,7 @@
                         <div class="price">220 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='w.jpg'>
-                        Свинина, помідор, перець, цибуля, часник, кетчуп.
+                        свинина, помідор, перець, цибуля, часник, кетчуп.
                     </div>
                 </div>
                 <div class="items">
@@ -742,8 +527,7 @@
                         <div class="price">220 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='x.jpg'>
-                        Курка, помідор, перець, цибуля, часник, кетчуп.
+                        курка, помідор, перець, цибуля, часник, кетчуп.
                     </div>
                 </div>
                 <div class="items">
@@ -754,8 +538,7 @@
                         <div class="price">330 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='y.jpg'>
-                        Ковбаски, фрі, грінки, соус аджика.
+                        ковбаски, фрі, грінки, соус аджика.
                     </div>
                 </div>
                 <div class="items">
@@ -765,9 +548,6 @@
                         </div>
                         <div class="price">270 ₴</div>
                     </div>
-                    <div class='op'>
-                        <img src='z.jpg'>
-                    </div>
                 </div>
                 <div class="items">
                     <div class="item toggle-desc">
@@ -775,9 +555,6 @@
                             Карась смажений
                         </div>
                         <div class="price">220 ₴</div>
-                    </div>
-                    <div class='op'>
-                        <img src='aa.jpg'>
                     </div>
                 </div>
                 <div class="items">
@@ -788,7 +565,6 @@
                         <div class="price">400 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='bb.jpg'>
                         свинина, лаваш, маринована цибуля, соус аджика.
                     </div>
                 </div>
@@ -805,7 +581,7 @@
                             <li>Сирний соус</li>
                             <li>Гірчиця</li>
                             <li>Часниковий</li>
-                   
+                            <li>Тар-тар</li>
                             <li>Бургер</li>
                             <li>Сметана</li>
                             <li>Аджика</li>
@@ -829,9 +605,8 @@
                         <div class="price">230 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='cc.jpg'>
-                        Помідори, болгарський перець, маслини,
-                        сир моцарела, соус.
+                        помідори, болгарський перець, маслини,
+                        сир моцарела, зелень, соус: кетчуп, майонез.
                     </div>
                 </div>
                 <div class="items">
@@ -842,9 +617,8 @@
                         <div class="price">250 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='dd.jpg'>
-                        Ковбаса напівкопчена, ковбаски, помідор,
-                        сир моцарела, соус.
+                        ковбаса напівкопчена, ковбаски, помідор,
+                        сир моцарела, зелень, соус: кетчуп, майонез.
                     </div>
                 </div>
                 <div class="items">
@@ -855,9 +629,8 @@
                         <div class="price">260 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='ee.jpg'>
-                        Курка, ананас, кукурудза, сир моцарела,
-                        соус, базилік.
+                        курка, ананас, кукурудза, сир моцарела,
+                        соус: кисло-солодкий і сирний, базилік.
                     </div>
                 </div>
             </div>
@@ -872,9 +645,6 @@
                         </div>
                         <div class="price">80 ₴</div>
                     </div>
-                    <div class='op'>
-                        <img src='ff.jpg'>
-                    </div>
                 </div>
                 <div class="items">
                     <div class="item toggle-desc">
@@ -884,8 +654,7 @@
                         <div class="price">100 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='gg.jpg'>
-                        
+                        Згущене молоко 
                     </div>
                 </div>
                 <div class="items">
@@ -896,8 +665,7 @@
                         <div class="price">30 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='hh.jpg'>
-                        
+                        яблуко, слива, вишня, каркаде, сахар.
                     </div>
                 </div>
                 <div class="items">
@@ -908,8 +676,7 @@
                         <div class="price">150 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='ii.png'>
-                        Яблука, кориця, горіхи, морозиво.
+                        яблука, кориця, горіхи, пудра, топінг, морозиво.
                     </div>
                 </div>
                 <div class="items">
@@ -920,8 +687,7 @@
                         <div class="price">90 ₴</div>
                     </div>
                     <div class="op">
-                        <img src='jj.png'>
-                        
+                        без родзинок, сметана, пудра.
                     </div>
                 </div>
                 <div class="items">
@@ -931,23 +697,20 @@
                         </div>
                         <div class="price">5 ₴</div>
                     </div>
-                    <div class='op'>
-                        <img src='kk.jpg'>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-    // Для каждого блока
+    // Для кожного блоку .salad
     const salads = document.querySelectorAll('.category');
 
     salads.forEach(function (salad) {
         const toggleBtn = salad.querySelector('.item-name');
         const itemList = salad.querySelector('.itemss');
 
-        
+        // Обробка кліку на заголовок "Салати"
             toggleBtn.addEventListener('click', function () {
             itemList.classList.toggle('open');
         });

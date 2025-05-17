@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            font-family:'EB Garamont', serif;
+            font-size: 16px;
+            background: #000;
+            color: #BEBEBE;
+            margin: 0;
+            padding: 20px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            justify-content: space-between;
+            display:flex;
+            cursor:pointer;
+            align-items: center;
+        }
+
+        .menu-name {
+            font-size: 22px;
+            color: #BEBEBE;
+            margin: 25px auto;
+            text-align: center;
+            font-weight: bold;
+            margin-top:60px;
+        }
+
+        .item-name {
+            cursor: pointer;
+            font-weight: regular;
+            font-size: 20px;
+            padding: 30px;
+            margin: 0 auto;
+            background-color: rgba(0,0,0, 0.8);
+            border-radius: 15px;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 2px 10px rgba(156, 156, 156, 0.4);
+        }
+
+        .item-name:hover {
+            color: #EDB418;
+            
+        }
+
+        .itemss {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background-color: rgba(0,0,0, 0.5);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(156, 156, 156, 0.4);
+            margin-bottom: 27px;
+            
+            
+        }
+
+        .itemss.open {
+            max-height: 1300px; /* Достатня висота для вмісту */
+        }
+
+        .items {
+            padding: 10px 15px;
+            margin: 10px;
+            background-color: rgb(20,20,20);
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+       .name {
+
+           flex:1;
+
+       }
+        .item {
+            
+            display: flex;
+            justify-content: space-between;
+/*
+            align-items: justify;
+            cursor: pointer;
+            font-size: 16px;
+            display: grid;*/
+            grid-template-columns: 1fr 80px 60px;
+            align-items: center;
+            padding: 0;
+        }
+
+        .item:hover .name {
+            color: #CEB160;
+        }
+
+        .price {
+            color: #EDB418;
+            white-space: nowrap;
+            text-align: right;
+            margin-left: auto;
+            
+        }
+
+        .op{
+            max-height: 0;
+            overflow: hidden;
+            font-size: 14px;
+            padding: 0;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            color: #aaa;
+            display:flex;
+            justify-content: flex-start;
+            gap:10px;
+            margin-top:10px;
+            
+            
+        }
+
+        .op.show{
+            max-height: 500px;
+            padding: 8px 0;
+        }
+        .op-content {
+            display: flex;
+            /*align-items: flex-start;
+*/
+            gap: 2px;
+        }
+
+        .op-content img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+       .op img {
+
+           border-radius: 10px;
+
+       }
+        button {
+            background-color: #000;
+            color: #BEBEBE;
+            border-width: 0;
+            
+        }
+        button:hover {
+            color:#EDB418;
+            background-color: #1b1a1a;
+        }
+        .gold {
+            color:#EDB418;
+        }
+        img {
+           
+            top:50px;
+        }
+        .logo-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            top:25px;
+            
+        }
+        
+        .logo {
+            width: 210px;
+            height: 120px;
+            
+      
+        }
+        
+        .circle-wrapper {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        
+        .round-img {
+            position: absolute;
+            top: -20px;
+            right: -60px;
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            object-fit: cover;
+            z-index:1;
+        }
+        
+        .small-img {
+            position: absolute;
+            bottom: 0;
+            right: -4px;
+            top:36px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            z-index: 3;
+        }
+        
+        .black-circle {
+            position: absolute;
+            bottom: 0;
+            top:29px;
+            right: -9px;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        .tri{
+            position: absolute; 
+            bottom: 0;
+            left: 0;
+            top:270px;
+            width: 280px; 
+            height: auto;
+            overflow: hidden;
+            z-index: -3; 
+        }
+        
+        .tri img {
+            width: 100%;
+            display: block;
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+            transform: rotate(90deg);
+            box-shadow:  rgba(156, 156, 156, 0.7);
+        }
+        .one{
+            position: absolute; 
+            bottom: 0;
+            left: 0;
+            top:670px;
+            width: 280px; 
+            height: 300px;
+            overflow: hidden;
+            z-index: -2; 
+        }
+        
+        .one img {
+            width: 100%;
+            display: block;
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+            transform: rotate(90deg);
+            box-shadow:  rgba(156, 156, 156, 0.7);
+        }
+        .sec{
+            position: absolute; 
+            bottom: 0;
+            left: 150px;
+            top:460px;
+            width: 300px; 
+            height: 300px;
+            overflow: hidden;
+            z-index: -2; 
+        }
+        
+        .sec img {
+            width: 100%;
+            display: block;
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+            transform: rotate(270deg);
+            box-shadow:  rgba(156, 156, 156, 0.7);
+        }
+        .three{
+            position: absolute; 
+            bottom: 0;
+            left: 150px;
+            top:880px;
+            width: 280px; 
+            height: 200px;
+            overflow: hidden;
+            z-index: -2;
+        }
+        
+        .three img {
+            width: 100%;
+            display: block;
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+            transform: rotate(270deg);
+            box-shadow:  rgba(156, 156, 156, 0.7);
+        }
+        .gr { 
+            font-size:12px;
+            padding: 3px 30px;
+            color: rgb(160,160,160)
+        }
+        .oop { 
+            justify-content: space-between; 
+            display: flex;
+            white-space: nowrap;
+            text-align:right;
+        }            
+        
+    
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        
+        <div class="logo-container">
+            <img src="logo.jpg" class="logo">
+            <div class="circle-wrapper">
+                <img src="head.png" class="small-img">
+                <div class="black-circle"></div>
+                <img src="heade.jpg" class="round-img">
+            </div>
+        </div>
+        <div class="menu-name">
+            
+        </div>
+    </div>
+    <div class="menu">
+        <div class="category">
+            <div class="item-name toggle-button">Ресторанне меню</div>
+        </div>
+        <div class="category">
+            <div class="item-name toggle-button">Комплексне меню</div>
+        </div>
+        <div class="category">
+            <div class="item-name toggle-button">Бенкетне меню</div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // Для каждого блока
+        const salads = document.querySelectorAll('.category');
+    
+        salads.forEach(function (salad) {
+            const toggleBtn = salad.querySelector('.item-name');
+            const itemList = salad.querySelector('.itemss');
+    
+            
+                toggleBtn.addEventListener('click', function () {
+                itemList.classList.toggle('open');
+            });
+    
+            // Обробка кліку на кожну страву в цьому блоці
+            /*toggleBtn.addEventListener('click', function () {
+        // Закриваємо всі .itemss в усіх .salad
+                document.querySelectorAll('.category .itemss').forEach(function (el) {
+                el.classList.remove('open');
+                });*/
+    
+        // Відкриваємо поточний
+               /* itemList.classList.add('open');
+            });*/
+            const dishItems = salad.querySelectorAll('.item.toggle-desc');
+    
+        dishItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                const op = item.nextElementSibling;
+                op.classList.toggle('show');
+            });
+        });
+    
+    });
+});
+    
+    
+</script>
+</body>
+</html>

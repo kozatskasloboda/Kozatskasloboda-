@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+    <style>
+        body {
+            font-family: Garamond, serif;
+            font-size: 16px;
+            background: #000;
+            color: #BEBEBE;
+            margin: 0;
+            padding: 20px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .menu-name {
+            font-size: 28px;
+            color: #EDB418;
+            margin-bottom: 30px;
+        }
+
+        .item-name {
+            cursor: pointer;
+            font-size: 22px;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #1b1a1a;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 2px 10px rgba(156, 152, 152, 0.1);
+        }
+
+        .item-name:hover {
+            color: #EDB418;
+            background-color: #2b2a2a;
+        }
+
+        .itemss {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background-color: #1b1a1a;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(156, 152, 152, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .itemss.open {
+            max-height: 1000px; /* Достатня висота для вмісту */
+        }
+
+        .items {
+            padding: 12px 15px;
+            margin: 10px;
+            background-color: #2f2f2f;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .item:hover .name {
+            color: #CEB160;
+        }
+
+        .price {
+            color: #EDB418;
+        }
+
+        .op {
+            max-height: 0;
+            overflow: hidden;
+            font-size: 14px;
+            padding: 0;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            color: #aaa;
+        }
+
+        .op.show {
+            max-height: 200px;
+            padding: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-name">Меню</div>
+    </header>
+
+    <div class="salad">
+        <div class="item-name">Салати</div>
+        <div class="itemss">
+            <div class="items">
+                <div class="item">
+                    <div class="name">Цезар з куркою</div>
+                    <div class="price">250 ₴</div>
+                </div>
+                <div class="op">Лист салата, яйця перепелині, помідор чері, куряче філе су-від, сухарики, сир пармезан, кунжут, бальзамічний соус, заправка.</div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <div class="name">Весняний</div>
+                    <div class="price">75 ₴</div>
+                </div>
+                <div class="op">Капуста, огірок, зелень, заправка.</div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <div class="name">Домашній</div>
+                    <div class="price">90 ₴</div>
+                </div>
+                <div class="op">Огірок, помідор, цибуля, перець болгарський.</div>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <div class="name">З баклажанами і фетою</div>
+                    <div class="price">300 ₴</div>
+                </div>
+                <div class="op">Лист салата, помідор чері, смажений баклажан, фєта, бальзамічний соус, кунжут, заправка.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.salad').forEach(function (salad) {
+                const toggleBtn = salad.querySelector('.item-name');
+                const itemList = salad.querySelector('.itemss');
+
+                toggleBtn.addEventListener('click', function () {
+                    // Закриваємо всі інші .itemss
+                    document.querySelectorAll('.itemss').forEach(el => {
+                        if (el !== itemList) el.classList.remove('open');
+                    });
+                    itemList.classList.toggle('open');
+                });
+
+                const items = salad.querySelectorAll('.item');
+
+                items.forEach(function (item) {
+                    item.addEventListener('click', function () {
+                        const op = item.nextElementSibling;
+
+                        // Закриваємо всі інші описи
+                        salad.querySelectorAll('.op').forEach(el => {
+                            if (el !== op) el.classList.remove('show');
+                        });
+
+                        op.classList.toggle('show');
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
